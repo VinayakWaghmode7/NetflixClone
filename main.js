@@ -3,7 +3,7 @@ const apikey = "7543524441a260664a97044b8e2dc621";
 const apiEndpoint = "https://api.themoviedb.org/3"
 const imgPath = "https://image.tmdb.org/t/p/original";
 
-//APi fetch 
+//APi fetch code
 const apiPaths = {
     fetchAllCategories: `${apiEndpoint}/genre/movie/list?api_key=${apikey}`,
     fetchMoviesList: (id) => `${apiEndpoint}/discover/movie?api_key=${apikey}&with_genres=${id}`,
@@ -11,6 +11,7 @@ const apiPaths = {
      searchOnYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyD1c6YVxq5XUcKcz2Ljx43X0ROdzvB18aw`
 } 
 
+//Calling the function as soon as broswer running the code.
 function init(){
    fetchAndBuildAllSections();
    fetchTrendingMovies();
